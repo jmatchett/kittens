@@ -16,7 +16,7 @@
     <% @kittens.each do |kitten| %>
       <tr>
         <td><%= kitten.user.name %></td>
-        <td><%= kitten.link %></td>
+        <td><image src="<%= kitten.link %>" /></td>
         <td><%= kitten.comments_id %></td>
         <td><%= link_to 'Show', kitten %></td>
         <td><%= link_to 'Edit', edit_kitten_path(kitten) %></td>
