@@ -15,6 +15,7 @@ class KittensController < ApplicationController
   # GET /kittens/new
   def new
     @kitten = Kitten.new
+    @users = User.all
   end
 
   # GET /kittens/1/edit
