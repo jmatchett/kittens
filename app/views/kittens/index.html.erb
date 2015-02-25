@@ -15,7 +15,7 @@
   <tbody>
     <% @kittens.each do |kitten| %>
       <tr>
-        <td><%= kitten.user_id %></td>
+        <td><%= kitten.user.name %></td>
         <td><%= kitten.link %></td>
         <td><%= kitten.comments_id %></td>
         <td><%= link_to 'Show', kitten %></td>
