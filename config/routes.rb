@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :kittens
+
   get 'welcome/index'
 
   devise_for :users

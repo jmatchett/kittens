@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @kitten.user_id %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @kitten.link %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @kitten.comments_id %>
+</p>
+
+<%= link_to 'Edit', edit_kitten_path(@kitten) %> |
+<%= link_to 'Back', kittens_path %>
