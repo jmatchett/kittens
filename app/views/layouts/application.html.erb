@@ -13,6 +13,23 @@
   </head>
 
   <body>
+  	<div class="row">
+  		<div class="column small-2 small-offset-2 left">
+  			<%= image_tag 'KittenSpace-logo.png' %>
+  		</div>
+  		<div class="column small-8 right">
+  			<% if user_signed_in? %>
+	  			<ul class="inline-list right" style="margin-top: 15px">
+	  				<li>
+	  					<%= link_to "Post New Kitten", new_kitten_path, class: "button small" %>
+	  				</li>
+	  				<li>
+	  					<%= link_to "Sign out",destroy_user_session_path, method: :delete, class: "button small" %>
+	  				</li>
+	  			</ul>
+  			<% end %>
+  		</div>
+  	</div>
 
     <%= yield %>
 

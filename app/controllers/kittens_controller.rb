@@ -1,5 +1,5 @@
 class KittensController < ApplicationController
-  before_action :set_kitten, only: [:show, :edit, :update, :destroy]
+  before_action :set_kitten, :sign_in_show, only: [:show, :edit, :update, :destroy]
 
   # GET /kittens
   # GET /kittens.json
@@ -72,4 +72,10 @@ class KittensController < ApplicationController
     def kitten_params
       params.require(:kitten).permit(:user_id, :link, :comments_id)
     end
+
+	  def sign_in_show
+	  	if user_signed_in? == false
+	  		render 'devise/session/new'
+	  	end
+	  end
 end
