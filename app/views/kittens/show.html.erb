@@ -1,19 +1,20 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>User:</strong>
-  <%= @kitten.user_id %>
-</p>
-
-<p>
-  <strong>Link:</strong>
-  <%= @kitten.link %>
-</p>
-
-<p>
-  <strong>Comments:</strong>
-  <%= @kitten.comments_id %>
-</p>
-
-<%= link_to 'Edit', edit_kitten_path(@kitten) %> |
-<%= link_to 'Back', kittens_path %>
+<div class="row">
+	<div class="column small-12 medium-6 medium-centered">
+		<%= link_to 'Back', kittens_path %>
+		<% if current_user.id == @kitten.user_id %>
+			| <%= link_to 'Edit', edit_kitten_path(@kitten) %>
+		<% end %>
+	</div>
+	<div class="column small-12 medium-6 medium-centered">
+		<h3>
+			<small>posted by</small>
+			<br>
+			<%= @kitten.user.name %>
+		</h3>
+	</div>
+	<div class="column small-12 medium-6 medium-centered">
+		<image src="<%= @kitten.link %>" />
+	</div>
+</div>
+<!--<%= @kitten.comments_id %>-->
