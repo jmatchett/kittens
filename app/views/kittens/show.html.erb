@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
-	<div class="column small-12 medium-6 medium-centered">
+	<div class="column small-12 medium-8 medium-centered">
 		<%= link_to 'Back', kittens_path %>
 		<% if current_user.id == @kitten.user_id %>
 			| <%= link_to 'Edit', edit_kitten_path(@kitten) %>
 		<% end %>
 	</div>
-	<div class="column small-12 medium-6 medium-centered">
+	<div class="column small-12 medium-8 medium-centered">
 		<h3>
 			<small>posted by</small>
 			<br>
 			<%= @kitten.user.name %>
 		</h3>
 	</div>
-	<div class="column small-12 medium-6 medium-centered">
+	<div class="column small-12 medium-8 medium-centered">
 		<image src="<%= @kitten.link %>" />
 	</div>
 </div>
