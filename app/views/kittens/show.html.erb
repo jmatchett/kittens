@@ -16,5 +16,12 @@
 	<div class="column small-12 medium-8 medium-centered">
 		<image src="<%= @kitten.link %>" />
 	</div>
+	<%= @comments.each do |comment| %>
+		<%= comment %>
+	<% end %>
+	<div class="column small-12 medium-8 medium-centered">
+		<h3>New comment</h3>
+		<%= render 'comments/form' %>
+	</div>
 </div>
 <!--<%= @kitten.comments_id %>-->

@@ -10,6 +10,10 @@ class KittensController < ApplicationController
   # GET /kittens/1
   # GET /kittens/1.json
   def show
+  	@comment = Comment.new
+  	@comments = Comment.all
+    @kittens = Kitten.all
+    @users = User.all
   end
 
   # GET /kittens/new
